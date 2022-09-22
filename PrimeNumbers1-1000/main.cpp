@@ -3,14 +3,27 @@
 
 
 #include <iostream>
+#include <string>
+
 
 using namespace std;
 
 bool prime;
 
+int minRange;
+int maxRange;
+
 int main(int argc, char const* argv[])
 {
-	for (int i = 1; i <= 1000; i++) {
+	cout << "Enter minimum number in range: ";
+	cin >> minRange;
+
+	cout << "Enter maximum number in range: ";
+	cin >> maxRange;
+
+	cout << "All of the prime numbers in the range: " << minRange << " to " << maxRange << " are:" << endl;
+
+	for (int i = minRange; i <= maxRange; i++) {
 		bool prime = true;
 
 		for (int j = 2; j < i; j++) {
